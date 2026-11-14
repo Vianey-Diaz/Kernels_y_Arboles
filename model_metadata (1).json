@@ -1,0 +1,110 @@
+{
+    "nombre_modelo": "Clasificación de conexiones de red: 4 kernels SVM y un árbol de decisión",
+    "tipo_modelo": "Clasificación supervisada (SVC con 4 kernels + DecisionTreeClassifier)",
+    "variable_objetivo": "clase",
+    "clases": {
+        "0": "Normal",
+        "1": "Sospechosa"
+    },
+    "variables_usadas": [
+        "trafico_mbps",
+        "latencia_ms"
+    ],
+    "modelo_seleccionado": "SVM RBF",
+    "orden_modelos": [
+        "SVM Lineal",
+        "SVM Polinomial",
+        "SVM RBF",
+        "SVM sigmoide",
+        "Árbol de decisión"
+    ],
+    "rangos": {
+        "trafico_mbps": [
+            26.32,
+            106.97
+        ],
+        "latencia_ms": [
+            37.55,
+            103.21
+        ]
+    },
+    "tabla_validacion_cruzada": [
+        {
+            "Modelo": "SVM RBF",
+            "Accuracy CV": 0.9633,
+            "F1 CV": 0.963,
+            "Desviación F1": 0.0172
+        },
+        {
+            "Modelo": "Árbol de decisión",
+            "Accuracy CV": 0.87,
+            "F1 CV": 0.8729,
+            "Desviación F1": 0.0068
+        },
+        {
+            "Modelo": "SVM Polinomial",
+            "Accuracy CV": 0.85,
+            "F1 CV": 0.8477,
+            "Desviación F1": 0.038
+        },
+        {
+            "Modelo": "SVM Lineal",
+            "Accuracy CV": 0.8367,
+            "F1 CV": 0.8383,
+            "Desviación F1": 0.0212
+        },
+        {
+            "Modelo": "SVM sigmoide",
+            "Accuracy CV": 0.6733,
+            "F1 CV": 0.6778,
+            "Desviación F1": 0.0509
+        }
+    ],
+    "tabla_prueba": [
+        {
+            "Modelo": "SVM Lineal",
+            "Accuracy": 0.85,
+            "Precisión": 0.8571,
+            "Recall": 0.84,
+            "F1": 0.8485
+        },
+        {
+            "Modelo": "SVM Polinomial",
+            "Accuracy": 0.85,
+            "Precisión": 0.8723,
+            "Recall": 0.82,
+            "F1": 0.8454
+        },
+        {
+            "Modelo": "SVM RBF",
+            "Accuracy": 0.97,
+            "Precisión": 0.9796,
+            "Recall": 0.96,
+            "F1": 0.9697
+        },
+        {
+            "Modelo": "SVM sigmoide",
+            "Accuracy": 0.67,
+            "Precisión": 0.6889,
+            "Recall": 0.62,
+            "F1": 0.6526
+        },
+        {
+            "Modelo": "Árbol de decisión",
+            "Accuracy": 0.91,
+            "Precisión": 0.8727,
+            "Recall": 0.96,
+            "F1": 0.9143
+        }
+    ],
+    "semilla": 240,
+    "filas_entrenamiento": 300,
+    "filas_prueba": 100,
+    "version_sklearn": "1.6.1",
+    "archivos_generados": [
+        "/content/models/modelos_kernels_conexiones.pkl",
+        "/content/models/model_metadata.json",
+        "/content/outputs/conexiones_red.csv",
+        "/content/outputs/requirements.txt"
+    ]
+}
